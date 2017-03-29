@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+	<head>
+    	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    	<meta name="viewport" content="width=1920">
+
+	    <title>PlayerHTML5Subtitle</title>
+
+	    <link rel="stylesheet" type="text/css" href="style.css"/>
+	    <script type="text/javascript" src="main.js"></script>
+	</head>
+
+	<body>
+		<h1>Tizen Video App with Subtitle</h1>
+    	<h2>Video player with subtitle based on HTML5 video / track element</h2>
+
+		<div class = "left">
+    		<video id="video" preload="metadata" >
+    			<source class="active" type="video/mp4" src="http://developer.samsung.com/onlinedocs/tv/Preview/1.mp4">
+    			<track label="English" kind="subtitles" srclang="en" src="http://developer.samsung.com/onlinedocs/tv/Preview/1-en.vtt">
+            	<track label="Korean" kind="subtitles" srclang="ko" src="http://developer.samsung.com/onlinedocs/tv/Preview/1-ko.vtt">
+    		</video>
+    		<div id="video-controls">
+    			<div id="play">PLAY</div>
+    			<div id="stop">STOP</div>
+    			<div id="pause">PAUSE</div>
+    			<div id="subtitles">CC</div>
+            	<div id="fullscreen">FullScreen</div>
+    		</div>
+    		<div class="logs" id="logs"></div>
+		</div>
+
+		<div class="right">
+
+        	<h2>Info</h2>
+
+        	<p>MP4 files can be tested in Tizen Emulator. Other formats need TV.</p>
+
+        	<p>This app plays content with subtitle,</p>
+        	<p>using the WebVTT format and the <code>track</code> element.</p>
+        	<p>[Available Subtitle] - English, Korean</p>
+        	<p>Of course, other languages can be added.</p>
+
+        	<h2>Operation</h2>
+        	<p>Use remote controller to operate on video player for basic control.</p>
+        	<p>- [Available keys] :</p>
+        	<pre>	[PLAY] - play the video</pre>
+        	<pre>	[PAUSE] - pause the video</pre>
+        	<pre>	[STOP] - stop the video</pre>
+        	<pre>	[ENTER] - change the screen size</pre>
+        	<pre>	[RED] - show or hide the subtitle</pre>
+        	<pre>	[RETURN] - hide the application</pre>
+        	<p>And moreover you can control play & subtitle by using the mouse.</p>
+    	</div>
+	</body>
+</html>

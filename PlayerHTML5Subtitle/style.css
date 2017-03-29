@@ -1,0 +1,182 @@
+@CHARSET "UTF-8";
+
+body {
+    font-size: 1.5em;
+    padding: 0;
+    margin: 0;
+    width: 1920px;
+    height: 1080px;
+    overflow: hidden;
+    background-color: #222222;
+    color: silver;
+    text-shadow: #000 3px 3px 3px;
+    font-family: 'Open Sans', sans-serif;
+}
+
+body:after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: url('lightblue_empty_grid.svg');
+    width: 100%;
+    height: 100%;
+    opacity: 0.05;
+    z-index: -1;
+}
+
+h1, h2 {
+    font-family: sans-serif;
+    text-align: center;
+    padding: 10px;
+    color: lightgray;
+    background: rgba(0, 0, 0, 0.2);
+    margin: 0;
+}
+
+p {
+    margin: 8px 0;
+}
+
+.left, .right {
+    float: left;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.left {
+	display: block;
+    width: 60%;
+    height: 100%;
+}
+
+.right {
+	display: block;
+    width: 40%;
+    font-size: 0.9em;
+}
+
+#video {
+    z-index: -1;
+    width: 90%;
+    display: block;
+    margin-top: 40px;
+    margin-left: 60px;
+
+}
+
+#video.fullscreenMode {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    margin-top: 0px;
+    margin-left: 0px;
+    z-index: 1;
+}
+
+#video-controls {
+    z-index: 2;
+    width: 90%;
+    height: 40px;
+    border-top: solid 1px #fff;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0.8;
+    display:block;
+    margin-left: 60px;
+}
+
+#video-controls.fullscreenMode {
+    position: fixed;
+    top: 1040px;
+    left: 0;
+    width: 100%;
+    margin-left: 0px;
+    background-color: transparent;
+}
+
+#video-controls div#fullscreen {
+    float: right;
+    padding-right: 10px;
+}
+
+#video-controls div {
+    float: left;
+    color: #fff;
+    font-weight: bold;
+    padding: 8px;
+    cursor: pointer;
+}
+
+#version {
+    position: fixed;
+    top: 5px;
+    left: 5px;
+}
+
+#logs {
+    overflow: auto;
+    font-family: monospace;
+    display:block;
+    width: 88%;
+    height: 185px;
+    border: 2px solid white;
+    margin-top: 20px;
+    margin-left: 60px;
+    padding: 10px;
+}
+
+.subtitles-menu li button:hover, .subtitles-menu li button:focus, .subtitles-menu li button[data-state="active"] {
+	opacity:0.3;
+}
+
+.subtitles-menu {
+	display:none;
+	position: fixed;
+	top:650px;
+	left:208px;
+	background:#666;
+	list-style-type:none;
+	margin:0;
+	padding:0;
+	width:200px;
+	padding:10px;
+}
+
+.subtitles-menu.fullscreenMode {
+    z-index: 2;
+	display:none;
+	position: fixed;
+	top:925px;
+	left:142px;
+	background:#666;
+	list-style-type:none;
+	margin:0;
+	padding:0;
+	width:200px;
+	padding:10px;
+}
+
+.subtitles-menu li {
+	padding:0;
+	text-align:center;
+}
+.subtitles-menu li button {
+	border:none;
+	background:#000;
+	color:#fff;
+    font-size:20px;
+    font-weight: bold;
+	cursor:pointer;
+	width:90%;
+    height:30px;
+	padding:2px 5px;
+	border-radius:2px;
+}
+
+::cue {
+  color:#aed;
+  background-color: transparent;
+}
